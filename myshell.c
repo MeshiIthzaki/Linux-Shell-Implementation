@@ -7,8 +7,6 @@
 
 #define BUFFER_SIZE 100
 
-/* help functions */
-
 typedef struct HistoryNode{
     char command[BUFFER_SIZE];
     struct HistoryNode* next;
@@ -68,8 +66,6 @@ void free_history(HistoryNode* history)
     }
 }
 
-/* end of help functions */
-
 int main(void)
 {
     close(2);
@@ -92,8 +88,6 @@ int main(void)
         {
             break;
         }
-
-    /* my code starts here */
 
         total_commands++;
         add_to_history(&history,command);
